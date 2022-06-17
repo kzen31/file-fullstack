@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d65854b4.chunk.css",
+    "main.js": "/static/js/main.f3e8565a.chunk.js",
+    "main.js.map": "/static/js/main.f3e8565a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d11a88f9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d11a88f9.js.map",
+    "static/css/2.1bad7219.chunk.css": "/static/css/2.1bad7219.chunk.css",
+    "static/js/2.b07c6ef0.chunk.js": "/static/js/2.b07c6ef0.chunk.js",
+    "static/js/2.b07c6ef0.chunk.js.map": "/static/js/2.b07c6ef0.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1bad7219.chunk.css.map": "/static/css/2.1bad7219.chunk.css.map",
+    "static/css/main.d65854b4.chunk.css.map": "/static/css/main.d65854b4.chunk.css.map",
+    "static/js/2.b07c6ef0.chunk.js.LICENSE.txt": "/static/js/2.b07c6ef0.chunk.js.LICENSE.txt",
+    "static/media/1.f6ddba4e.png": "/static/media/1.f6ddba4e.png",
+    "static/media/astra.0fc2175f.webp": "/static/media/astra.0fc2175f.webp",
+    "static/media/theme.scss": "/static/media/typicons.d45316f6.ttf",
+    "static/media/img-1.9c3a9dc5.jpg": "/static/media/img-1.9c3a9dc5.jpg",
+    "static/media/img-2.4dde4053.jpg": "/static/media/img-2.4dde4053.jpg",
+    "static/media/logo-dark.607dbce3.png": "/static/media/logo-dark.607dbce3.png",
+    "static/media/logo-light.607dbce3.png": "/static/media/logo-light.607dbce3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d11a88f9.js",
+    "static/css/2.1bad7219.chunk.css",
+    "static/js/2.b07c6ef0.chunk.js",
+    "static/css/main.d65854b4.chunk.css",
+    "static/js/main.f3e8565a.chunk.js"
+  ]
+}
