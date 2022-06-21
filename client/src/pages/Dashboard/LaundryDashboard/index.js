@@ -32,7 +32,7 @@ const Dashboard = (props) => {
           'Authorization': "Bearer " + obj.access_token,
         };
 
-        const responseReport = await fetch('http://asabeta.com/api/laundry-dashboard/widget', { headers });
+        const responseReport = await fetch(process.env.REACT_APP_DATABASEURL + '/api/laundry-dashboard/widget', { headers });
         const dataReport = await responseReport.json();
         setReports(dataReport);
       }

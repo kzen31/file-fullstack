@@ -17,7 +17,7 @@ const GraphLastMonth = ({ data }) => {
           'Authorization': "Bearer " + obj.access_token,
         };
 
-        const response = await fetch('http://asabeta.com/api/catering-dashboard/count-last-5-month', { headers });
+        const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/catering-dashboard/count-last-5-month', { headers });
         const data = await response.json();
         setReportByMonth(data);
         // console.log(data)

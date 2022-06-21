@@ -53,7 +53,7 @@ const TableMaintenance = (props) => {
         'Authorization': "Bearer " + obj.access_token,
       };
 
-      const response = await fetch('http://asabeta.com/api/maintenance/task', { headers });
+      const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/maintenance/task', { headers });
       const data = await response.json();
       setComplaints(data);
     }

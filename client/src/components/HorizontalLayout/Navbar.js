@@ -175,7 +175,7 @@ const Navbar = props => {
                     <Link to="table-housekeeping" className="dropdown-item">
                       {props.t("Complaints")}
                     </Link>
-                    <Link to="pages-blank" className="dropdown-item">
+                    <Link to="task-housekeeping" className="dropdown-item">
                       {props.t("Task")}
                     </Link>  
                   </div>

@@ -1,6 +1,7 @@
-import React from 'react'
-import { Modal } from "reactstrap"
+import React from 'react';
+import { Modal } from "reactstrap";
 import { AvForm, AvField } from 'availity-reactstrap-validation';
+import axios from 'axios';
 
 const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_center }) => {
     function editPassword(value) {
@@ -10,21 +11,21 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
                 'Authorization': "Bearer " + obj.access_token
             }
         };
-        const payload = value;
+        const payload = {
+            "nrp" : `${dataUser.nrp}`,
+            "password" : `${value.password}`
+        }
 
-        console.log(payload);
-
-
-        // axios
-        //     .put("http://asabeta.com/api/maintenance/update-order/", payload, config)
-        //     .then((response) => {
-        //         console.log(response);
-        //         tog_center();
-        //         fetchData();
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
+        axios
+            .put("http://asabeta.com/api/reset", payload, config)
+            .then((response) => {
+                console.log(response);
+                tog_center();
+                fetchData();
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     function editDetailUser(value) {
@@ -36,18 +37,15 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
         };
         const payload = value;
 
-        console.log(payload);
-
-        // axios
-        //     .put("http://asabeta.com/api/maintenance/update-order/", payload, config)
-        //     .then((response) => {
-        //         console.log(response);
-        //         tog_center();
-        //         fetchData();
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
+        axios
+            .put("http://asabeta.com/api/edit/", payload, config)
+            .then((response) => {
+                tog_center();
+                fetchData();
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
     return (
@@ -87,7 +85,7 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
                                     className="form-control"
                                     placeholder="Enter Password"
                                     type="password"
-                                    minLength="5"
+                                    minLength="3"
                                     required
                                 />
 
@@ -184,12 +182,15 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
                         <div className="row mb-1">
                             <label htmlFor="horizontal-firstname-input" className="col-sm-3 col-form-label">Role</label>
                             <div className="col-sm-9">
-                                <AvField type="select" name="role" value={dataUser.authorities[1].authority.slice(5, 20)} required>
+                                <AvField type="select" name="role" value={dataUser.authorities[2].authority.slice(5, 20)} required>
                                     <option value="" selected disabled hidden>Choose one</option>
-                                    <option value="SUPERUSER">SUPERUSER</option>
-                                    <option value="MEGAUSER">MEGAUSER</option>
-                                    <option value="WORKER">WORKER</option>
-                                    <option value="CUSTOMER">CUSTOMER</option>
+                                    <option value="CUS">CUSTOMER</option>
+                                    <option value="MT">MT</option>
+                                    <option value="HK">HK</option>
+                                    <option value="SPV">SPV</option>
+                                    <option value="GS">GS</option>
+                                    <option value="HCGS">HCGS</option>
+                                    <option value="PROG">PROG</option>
                                 </AvField>
                             </div>
                         </div>

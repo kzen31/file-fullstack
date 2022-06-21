@@ -15,11 +15,9 @@ const PercenByStatus = () => {
                     'Authorization': "Bearer " + obj.access_token,
                 };
 
-                const response = await fetch('http://asabeta.com/api/main-dashboard/info-by-status', { headers });
+                const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/main-dashboard/info-by-status', { headers });
                 const data = await response.json();
                 setReportByStatus(data);
-                console.log("donussssssssssssssssss")
-                console.log(data)
             }
         }
 

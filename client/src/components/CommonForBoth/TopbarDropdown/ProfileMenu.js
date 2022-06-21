@@ -48,17 +48,6 @@ const ProfileMenu = props => {
           />
         </DropdownToggle>
         <DropdownMenu className="dropdown-menu-end">
-          <DropdownItem tag="a" href="/profile">
-            {" "}
-            <i className="mdi mdi-account-circle font-size-17 text-muted align-middle me-1" />
-            {props.t("Profile")}{" "}
-          </DropdownItem>
-
-          <DropdownItem tag="a" href="#">
-            <i className="mdi mdi-cog font-size-17 text-muted align-middle me-1" />
-            {props.t("Settings")}
-          </DropdownItem>
-
           <div className="dropdown-divider" />
           <Link to="/logout" className="dropdown-item text-danger">
             <i className="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger" />

@@ -49,7 +49,7 @@ const TableCatering = (props) => {
           'Authorization': "Bearer " + obj.access_token,
         };
 
-        const response = await fetch('http://asabeta.com/api/catering/rating-catering-many', { headers });
+        const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/catering/rating-catering-many', { headers });
         const data = await response.json();
         setData(data);
         console.log(data);

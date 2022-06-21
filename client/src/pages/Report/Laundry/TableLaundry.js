@@ -55,7 +55,7 @@ const TableLaundry = (props) => {
         'Authorization': "Bearer " + obj.access_token,
       };
 
-      const response = await fetch('http://asabeta.com/api/laundry/all', { headers });
+      const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/laundry/all', { headers });
       const data = await response.json();
       setComplaints(data);
     }

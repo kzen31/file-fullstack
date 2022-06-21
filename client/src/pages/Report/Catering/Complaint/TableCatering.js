@@ -54,7 +54,7 @@ const TableCatering = (props) => {
       const headers = {
         'Authorization': "Bearer " + obj.access_token,
       };
-      const response = await fetch('http://asabeta.com/api/catering/all', { headers });
+      const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/catering/all', { headers });
       const data = await response.json();
       setComplaints(data);
       console.log(data)

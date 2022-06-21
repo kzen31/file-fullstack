@@ -14,7 +14,7 @@ const FormEdit = ({ dataStatus, modal_center, tog_center, func_setmodal_center, 
                 'Authorization': "Bearer " + obj.access_token,
             };
 
-            const response = await fetch('http://asabeta.com/api/users/mt', { headers });
+            const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/users/mt', { headers });
             const data = await response.json();
             setListMt(data);
         }

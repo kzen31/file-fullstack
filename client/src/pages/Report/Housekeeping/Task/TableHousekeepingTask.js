@@ -52,12 +52,12 @@ const TableHousekeeping = (props) => {
         'Authorization': "Bearer " + obj.access_token,
       };
 
-      const responseRoom = await fetch('http://asabeta.com/api/task/room', { headers });
+      const responseRoom = await fetch(process.env.REACT_APP_DATABASEURL + '/api/task/room', { headers });
       const dataRoom = await responseRoom.json();
       setTaskRoom(dataRoom);
       // console.log(data)
 
-      const responseMess = await fetch('http://asabeta.com/api/task/mess', { headers });
+      const responseMess = await fetch(process.env.REACT_APP_DATABASEURL + '/api/task/mess', { headers });
       const dataMess = await responseMess.json();
       setTaskMess(dataMess);
     }

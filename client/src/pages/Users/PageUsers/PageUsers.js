@@ -56,7 +56,7 @@ const PageUsers = (props) => {
                 'Authorization': "Bearer " + obj.access_token,
             };
 
-            const response = await fetch('http://asabeta.com/api/users', { headers });
+            const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/users', { headers });
             const data = await response.json();
             setUsers(data);
         }
@@ -162,7 +162,7 @@ const PageUsers = (props) => {
                                                 <th scope="row">{i + 1}</th>
                                                 <td>{object.nrp}</td>
                                                 <td>{object.name}</td>
-                                                <td>{object.authorities[1].authority.slice(5, 20)}</td>
+                                                <td>{object.authorities[2].authority.slice(5, 20)}</td>
                                                 <td>{object.department}</td>
                                                 <td>{new Date(object.created_at).toLocaleDateString()}</td>
                                                 <td style={{ width: "185px" }}>
