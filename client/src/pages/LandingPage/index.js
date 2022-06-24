@@ -28,6 +28,9 @@ import "./assets/css/style.css";
 import "./assets/css/responsive.css";
 
 function LandingPage() {
+    const body = document.getElementsByTagName("BODY")[0];
+    body.style.backgroundColor = "white";
+
     return (
         <MenuContextProvider>
             <Layout pageTitle="Apiton | Home Page">

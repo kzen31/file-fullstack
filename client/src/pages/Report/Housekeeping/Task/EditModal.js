@@ -28,7 +28,7 @@ const EditModal = ({ dataModal, modal_standard, tog_standard, func_setmodal_stan
         
 
         axios
-            .put("http://asabeta.com/api/task/" + `${updateData}` +  "-update/" + `${id}`, payload, config)
+            .put(process.env.REACT_APP_DATABASEURL + "/api/task/" + `${updateData}` +  "-update/" + `${id}`, payload, config)
             .then((response) => {
                 console.log(response);
                 tog_standard();

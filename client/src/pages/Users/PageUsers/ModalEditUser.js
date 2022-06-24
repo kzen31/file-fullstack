@@ -17,7 +17,7 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
         }
 
         axios
-            .put("http://asabeta.com/api/reset", payload, config)
+            .put(process.env.REACT_APP_DATABASEURL + "/api/reset", payload, config)
             .then((response) => {
                 console.log(response);
                 tog_center();
@@ -38,7 +38,7 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
         const payload = value;
 
         axios
-            .put("http://asabeta.com/api/edit/", payload, config)
+            .put(process.env.REACT_APP_DATABASEURL + "/api/edit/", payload, config)
             .then((response) => {
                 tog_center();
                 fetchData();

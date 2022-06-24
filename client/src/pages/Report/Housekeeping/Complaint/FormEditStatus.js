@@ -19,7 +19,7 @@ const FormEditStatus = ({ dataStatus, modal_center, tog_center, func_setmodal_ce
         const id = dataStatus.id;
 
         axios
-            .put("http://asabeta.com/api/housekeeping/update/" + `${id}`, payload, config)
+            .put(process.env.REACT_APP_DATABASEURL + "/api/housekeeping/update/" + `${id}`, payload, config)
             .then((response) => {
                 console.log(response);
                 tog_center();

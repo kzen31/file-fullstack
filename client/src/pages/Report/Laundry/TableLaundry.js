@@ -33,7 +33,7 @@ const TableLaundry = (props) => {
   const [record, setRecord] = useState(null);
 
   const breadcrumbItems = [
-    { title: "Asa Service", link: "#" },
+    { title: "ASA Website", link: "#" },
     { title: "Laundry", link: "#" },
     { title: "Complaints", link: "#" },
   ]
@@ -71,7 +71,7 @@ const TableLaundry = (props) => {
     const id = record.id;
 
     axios
-      .delete("http://asabeta.com/api/laundry/delete-record/" + `${id}`, config)
+      .delete(process.env.REACT_APP_DATABASEURL + "/api/laundry/delete-record/" + `${id}`, config)
       .then((response) => {
         console.log(response);
         setconfirm_both(false)

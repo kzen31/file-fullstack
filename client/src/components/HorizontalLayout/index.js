@@ -45,7 +45,7 @@ class Layout extends Component {
     let currentage = title.charAt(1).toUpperCase() + title.slice(2)
 
     document.title =
-      currentage + "Asa Service"
+      currentage + "ASA Web Admin"
 
     this.props.changeLayout("horizontal")
     if (this.props.topbarTheme) {

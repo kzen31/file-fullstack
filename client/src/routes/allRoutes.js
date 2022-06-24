@@ -50,14 +50,14 @@ const userRoutes = [
 ]
 
 const authRoutes = [
+  { path: "/home", component: LandingPage },
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
 
+
   { path: "/pages-404", component: Pages404 },
   { path: "/pages-500", component: Pages500 },
-
-  { path: "/home", component: LandingPage },
 ]
 
 export { userRoutes, authRoutes }

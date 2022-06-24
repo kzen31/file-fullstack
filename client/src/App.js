@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, {useEffect} from "react"
+import { Redirect } from "react-router-dom"
 
 import { Switch, BrowserRouter as Router } from "react-router-dom"
 import { connect } from "react-redux"
@@ -57,6 +58,7 @@ const App = props => {
               exact
             />
           ))}
+          <Redirect to="/pages-404" />
         </Switch>
       </Router>
     </React.Fragment>

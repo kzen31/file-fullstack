@@ -32,7 +32,7 @@ const TableHousekeepingTask = (props) => {
 
 
   const breadcrumbItems = [
-    { title: "Asa Service", link: "#" },
+    { title: "ASA Website", link: "#" },
     { title: "Housekeeping", link: "#" },
     { title: "Complaints", link: "#" },
   ]
@@ -70,7 +70,7 @@ const TableHousekeepingTask = (props) => {
     const id = record.id;
 
     axios
-      .delete("http://asabeta.com/api/housekeeping/delete-record/" + `${id}`, config)
+      .delete(process.env.REACT_APP_DATABASEURL + "/api/housekeeping/delete-record/" + `${id}`, config)
       .then((response) => {
         console.log(response);
         setconfirm_both(false)

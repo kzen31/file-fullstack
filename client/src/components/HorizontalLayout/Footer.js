@@ -8,7 +8,7 @@ const Footer = () => {
         <Container fluid={true}>
           <Row>
             <Col sm={12}>
-              © {new Date().getFullYear()} Asa Service <span className="d-none d-sm-inline-block"> - by Asa Team IT.</span>
+              © {new Date().getFullYear()} Asa Web Admin <span className="d-none d-sm-inline-block"> - by Asa Team IT.</span>
             </Col>
           </Row>
         </Container>

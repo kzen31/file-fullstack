@@ -32,7 +32,7 @@ const TableMaintenance = (props) => {
   const [record, setRecord] = useState(null);
 
   const breadcrumbItems = [
-    { title: "Asa Service", link: "#" },
+    { title: "ASA Website", link: "#" },
     { title: "Maintenance", link: "#" },
     { title: "Complaints", link: "#" },
   ]
@@ -70,7 +70,7 @@ const TableMaintenance = (props) => {
     const id = record.id;
 
     axios
-      .delete("http://asabeta.com/api/maintenance/delete-record/" + `${id}`, config)
+      .delete(process.env.REACT_APP_DATABASEURL + "/api/maintenance/delete-record/" + `${id}`, config)
       .then((response) => {
         console.log(response);
         setconfirm_both(false)

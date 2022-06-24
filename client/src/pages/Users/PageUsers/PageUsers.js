@@ -18,6 +18,7 @@ import ModalEditUser from "./ModalEditUser";
 
 const PageUsers = (props) => {
     const [users, setUsers] = useState([]);
+    const [loginUser, setLoginUser] = useState(null);
     const [userToDelete, setUserToDelete] = useState(null);
     const [success_dlg, setsuccess_dlg] = useState(false)
     const [dynamic_title, setdynamic_title] = useState("")
@@ -30,7 +31,7 @@ const PageUsers = (props) => {
 
 
     const breadcrumbItems = [
-        { title: "Asa Service", link: "#" },
+        { title: "ASA Website", link: "#" },
         { title: "Users", link: "#" },
         { title: "Accounts", link: "#" },
     ]
@@ -52,13 +53,18 @@ const PageUsers = (props) => {
         if (localStorage.getItem("authUser")) {
             const obj = JSON.parse(localStorage.getItem("authUser"))
 
+            setLoginUser(obj.user.nrp)
+
             const headers = {
                 'Authorization': "Bearer " + obj.access_token,
             };
 
             const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/users', { headers });
             const data = await response.json();
-            setUsers(data);
+
+            const sorted = [...data].sort((a, b) => a['nrp'] - b['nrp'] );
+
+            setUsers(sorted);
         }
     }
 
@@ -190,6 +196,7 @@ const PageUsers = (props) => {
                                                     >
                                                         Reset
                                                     </Button> <span> </span>
+                                                    {(loginUser != object.nrp) ? 
                                                     <Button
                                                         color="danger"
                                                         size="sm"
@@ -202,7 +209,7 @@ const PageUsers = (props) => {
                                                     >
                                                         Delete
                                                     </Button>
-
+                                                    : null }
                                                 </td>
                                             </tr>
                                         ) : null}

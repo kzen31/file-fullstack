@@ -42,7 +42,7 @@ const Login = props => {
                   </h3>
                   <div className="p-3">
                     <h4 className="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-                    <p className="text-muted text-center">Sign in to continue to Asa Service.</p>
+                    <p className="text-muted text-center">Sign in to continue to Asa Web Admin.</p>
                     <AvForm
                       className="form-horizontal mt-4"
                       onValidSubmit={(e, v) => {
@@ -88,7 +88,7 @@ const Login = props => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  © {new Date().getFullYear()} Asa Service
+                  © {new Date().getFullYear()} Asa Web Admin
                   <span className="d-none d-sm-inline-block"> -by Asa Team IT.</span>
                 </p>
               </div>

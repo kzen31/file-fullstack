@@ -29,7 +29,7 @@ class Pages404 extends Component {
                                     </CardBody>
                                 </Card>
                                 <div className="mt-5 text-center">
-                                    <p>©2021 Lexa  - by Asa Team IT.</p>
+                                    <p>© {new Date().getFullYear()}  - by Asa Team IT.</p>
                                 </div>
                             </Col>
                         </Row>
