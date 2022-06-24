@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <section className="mailchimp-one">
-        <div className="container wow fadeInUp">
+        {/* <div className="container wow fadeInUp">
           <div className="inner-container">
             <div className="mailchimp-one__icon">
               <i className="apton-icon-mail"></i>
@@ -22,7 +22,7 @@ const Footer = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <footer className="site-footer">
@@ -120,7 +120,7 @@ const Footer = () => {
         </div>
         <div className="site-footer__bottom">
           <div className="container text-center">
-            <p>© copyright 2020 by Layerdrops.com</p>
+            <p>© copyright 2022 by Lintas Orbit Jaya Tech</p>
           </div>
         </div>
       </footer>

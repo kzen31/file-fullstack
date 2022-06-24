@@ -10,7 +10,7 @@ const NavLinks = () => {
   return (
     <ul className="main-nav__navigation-box">
       <li>
-        <Link href="">
+        <Link href="home">
           <a>Home</a>
         </Link>
       </li>

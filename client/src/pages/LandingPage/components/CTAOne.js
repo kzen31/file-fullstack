@@ -19,32 +19,28 @@ const CTAOne = () => {
             <div className="cta-one__content">
               <BlockTitle
                 textAlign="left"
-                paraText="Best Application"
-                titleText={`Powerful Application for \n Your Projects`}
+                paraText="Deskripsi"
+                titleText={`Apa Itu ASA \n Asto Service App?`}
               />
               <div className="cta-one__text">
                 <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur.
+                  Astro Service App atau ASA adalah suatu aplikasi yang bertujuan untuk meingkatkaan kualitas alur komunikasi yang bertujuan sebagai media penampung aspirasi, komplain, dan bantuan yang bersifat genting.
                 </p>
               </div>
               <ul className="list-unstyled cta-one__list">
                 <li>
                   <i className="fa fa-check-circle"></i>
-                  Refresing to get such a personal touch.
+                  Mudah digunakan.
                 </li>
                 <li>
                   <i className="fa fa-check-circle"></i>
-                  Duis aute irure dolor in reprehenderit in voluptate.
+                  Digunakan pada piranti mobile
                 </li>
                 <li>
                   <i className="fa fa-check-circle"></i>
-                  Velit esse cillum dolore eu fugiat nulla pariatur.
+                  Tersedia di Playstore dan App Store.
                 </li>
               </ul>
-              <a href="#" className="thm-btn cta-one__btn">
-                <span>Discover More</span>
-              </a>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import BlockTitle from "./BlockTitle";
 
 import TestiQoute from "../assets/images/shapes/testi-qoute-1-1.png";
 
-import TestiImageOne from "../assets/images/resources/testi-1-1.jpg";
+import loj from "../assets/images/asalogo/loj.jpeg";
 import TestiImageTwo from "../assets/images/resources/testi-1-2.jpg";
 import TestiImageThree from "../assets/images/resources/testi-1-3.jpg";
 SwiperCore.use([Pagination, Thumbs, Controller]);
@@ -56,17 +56,7 @@ const Testimonials = (props) => {
                 <Swiper {...paramsOne}>
                   <div className="swiper-slide">
                     <div className="testimonials-one__image">
-                      <img src={TestiImageOne} alt="Awesome Image" />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonials-one__image">
-                      <img src={TestiImageTwo} alt="Awesome Image" />
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonials-one__image">
-                      <img src={TestiImageThree} alt="Awesome Image" />
+                      <img src={loj} alt="Awesome Image" />
                     </div>
                   </div>
                 </Swiper>
@@ -77,48 +67,18 @@ const Testimonials = (props) => {
             <div className="my-auto">
               <BlockTitle
                 textAlign="left"
-                paraText="Our Testimonials"
-                titleText={`What Our Customers Are \n Talking About`}
+                paraText="Our Team"
+                titleText={`Apa Itu Loj Comunity?`}
               />
               <div className="testimonials-one__carousel">
                 <Swiper {...paramsTwo}>
                   <div className="swiper-slide">
                     <div className="testimonials-one__single">
                       <p className="testimonials-one__text">
-                        This is due to their excellent service, competitive
-                        pricing and customer support. It’s throughly refresing
-                        to get such a personal touch. Duis aute irure dolor in
-                        repre henderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
+                        Adalah organisasi yang bergerak di dunia Teknologi informasi dan berupaya dalam mendukung program digitalisasi pemerintahan dan perusahaan.
                       </p>
 
-                      <h3 className="testimonials-one__title">Joe Kolmer</h3>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonials-one__single">
-                      <p className="testimonials-one__text">
-                        This is due to their excellent service, competitive
-                        pricing and customer support. It’s throughly refresing
-                        to get such a personal touch. Duis aute irure dolor in
-                        repre henderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-
-                      <h3 className="testimonials-one__title">Darrin Martos</h3>
-                    </div>
-                  </div>
-                  <div className="swiper-slide">
-                    <div className="testimonials-one__single">
-                      <p className="testimonials-one__text">
-                        This is due to their excellent service, competitive
-                        pricing and customer support. It’s throughly refresing
-                        to get such a personal touch. Duis aute irure dolor in
-                        repre henderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
-                      </p>
-
-                      <h3 className="testimonials-one__title">Tammy Daniely</h3>
+                      <h3 className="testimonials-one__title">By Loj Comunity</h3>
                     </div>
                   </div>
                 </Swiper>

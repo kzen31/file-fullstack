@@ -3,7 +3,8 @@ import ModalVideo from "react-modal-video";
 
 import BannerShape from "../assets/images/shapes/banner-shape-1-1.png";
 import BannerBG from "../assets/images/resources/banner-image-1-1.jpg";
-import BannerMoc from "../assets/images/resources/banner-moc-1-1.png";
+import BannerMoc from "../assets/images/ss/ssasa.jpg";
+import Download from "../assets/images/favicons/pngegg.png";
 
 const Banner = () => {
   const [open, setOpen] = useState({
@@ -54,11 +55,15 @@ const Banner = () => {
               </form> */}
               <div className="mc-form__response"></div>
               <h3>
-              (ASA) ASTO SERVICE APP 
+                ASTO SERVICE APP (ASA)
               </h3>
-              <p>
+              <h1>
                 Where It All Began
-              </p>
+              </h1>
+              <h2 className="pt-4">Coming Soon On</h2>
+              <div className="container pt-4">
+                <img src={Download} width="320" height="160"></img>
+              </div>
             </div>
           </div>
         </div>

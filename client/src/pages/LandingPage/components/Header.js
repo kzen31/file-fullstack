@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import NavLinks from "./NavLinks";
 
-import LogoImage from "../assets/images/logo-1-1.png";
+import LogoImage from "../assets/images/LOGOASTRO.png";
 import { MenuContext } from "../context/MenuContext";
 
 const HeaderHome = (props) => {
@@ -35,7 +35,7 @@ const HeaderHome = (props) => {
       <div className="container-fluid">
         <div className="site-header-one__logo">
           <a href="/">
-            <img src={LogoImage} width="129" alt="" />
+            <img src={LogoImage} width="75" alt="" />
           </a>
           <span className="side-menu__toggler" onClick={handleMenuClick}>
             <i className="fa fa-bars"></i>
@@ -45,8 +45,8 @@ const HeaderHome = (props) => {
           <NavLinks />
         </div>
         <div className="main-nav__right">
-          <a href="/login" className={`thm-btn ${props.btnClass}`}>
-            <span>Login</span>
+          <a href="#" className={`thm-btn ${props.btnClass}`}>
+            <span>Login </span>
           </a>
         </div>
       </div>
