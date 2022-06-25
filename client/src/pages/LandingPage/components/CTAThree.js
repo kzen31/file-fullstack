@@ -13,7 +13,7 @@ const CTAThree = () => {
         <h3>
           Download our App Today & <br /> Experience Endless Possibilities
         </h3>
-        <p>and get started with a free 1 month trial for your business </p>
+        <p>coming soon on </p>
         <div className="cta-three__btn-wrap">
           <a href="#" className="cta-three__btn">
             <i className="fa fa-play"></i>

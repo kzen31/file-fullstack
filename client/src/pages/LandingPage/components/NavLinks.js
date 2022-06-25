@@ -10,7 +10,7 @@ const NavLinks = () => {
   return (
     <ul className="main-nav__navigation-box">
       <li>
-        <Link href="home">
+        <Link href="home/">
           <a>Home</a>
         </Link>
       </li>
@@ -24,18 +24,6 @@ const NavLinks = () => {
           duration={500}
         >
           Fitur
-        </ScrollLink>
-      </li>
-      <li>
-        <ScrollLink
-          activeClass="current"
-          to="pricing"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          Pricing
         </ScrollLink>
       </li>
       <li>
@@ -59,10 +47,9 @@ const NavLinks = () => {
           offset={-70}
           duration={500}
         >
-          Screens
+          Screenshots
         </ScrollLink>
       </li>
-
     </ul>
   );
 };

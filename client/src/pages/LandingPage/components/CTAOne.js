@@ -3,7 +3,7 @@ import BlockTitle from "./BlockTitle";
 
 import CtaShape1 from "../assets/images/shapes/cta-1-shape-1.png";
 import CtaShape2 from "../assets/images/shapes/cta-1-shape-2.png";
-import CtaMoc1 from "../assets/images/resources/cta-1-moc-1.png";
+import CtaMoc1 from "../assets/images/ss/asa2.png";
 
 const CTAOne = () => {
   return (
@@ -20,11 +20,11 @@ const CTAOne = () => {
               <BlockTitle
                 textAlign="left"
                 paraText="Deskripsi"
-                titleText={`Apa Itu ASA \n Asto Service App?`}
+                titleText={`Apa Itu ASA? \n (Asto Service App)`}
               />
               <div className="cta-one__text">
                 <p>
-                  Astro Service App atau ASA adalah suatu aplikasi yang bertujuan untuk meingkatkaan kualitas alur komunikasi yang bertujuan sebagai media penampung aspirasi, komplain, dan bantuan yang bersifat genting.
+                  Asto Service App atau ASA adalah suatu aplikasi yang bertujuan untuk meningkatkan kualitas alur komunikasi serta sebagai media penampung aspirasi, komplain, dan bantuan yang bersifat genting.
                 </p>
               </div>
               <ul className="list-unstyled cta-one__list">
@@ -38,7 +38,7 @@ const CTAOne = () => {
                 </li>
                 <li>
                   <i className="fa fa-check-circle"></i>
-                  Tersedia di Playstore dan App Store.
+                  Tersedia di Playstore dan App Store (coming soon).
                 </li>
               </ul>
             </div>

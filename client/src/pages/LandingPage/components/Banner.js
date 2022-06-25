@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 
 import BannerShape from "../assets/images/shapes/banner-shape-1-1.png";
-import BannerBG from "../assets/images/resources/banner-image-1-1.jpg";
-import BannerMoc from "../assets/images/ss/ssasa.jpg";
-import Download from "../assets/images/favicons/pngegg.png";
+import BannerBG from "../assets/images/resources/img-3.jpg";
+import BannerMoc from "../assets/images/ss/asa.png";
+import Download from "../assets/images/asalogo/loj.png";
 
 const Banner = () => {
   const [open, setOpen] = useState({
@@ -60,9 +60,9 @@ const Banner = () => {
               <h1>
                 Where It All Began
               </h1>
-              <h2 className="pt-4">Coming Soon On</h2>
-              <div className="container pt-4">
-                <img src={Download} width="320" height="160"></img>
+              <h2 className="pt-4">Developed By Lintas Orbit Jaya Tech</h2>
+              <div className="container pt-4" width="100%" height="100%">
+                <img src={Download}></img>
               </div>
             </div>
           </div>

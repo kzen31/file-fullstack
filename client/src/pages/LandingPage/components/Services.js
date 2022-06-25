@@ -11,8 +11,8 @@ const Services = () => {
       <div className="container pt-4">
         <BlockTitle
           textAlign="center"
-          paraText="FITUR YANG DIMILIKI APLIKASI"
-          titleText={`ASTRO SERVICE APP MEMILIKI BANYAK \n FITUR UNTUK ANDA`}
+          paraText="FITUR APLIKASI"
+          titleText={`ASTO SERVICE APP MEMILIKI BANYAK \n FITUR UNTUK ANDA`}
         />
         <div className="row">
           <div className="col-lg-3 col-md-6">
@@ -35,7 +35,7 @@ const Services = () => {
                   <img src={ASASGMS} width="150" alt="" />
                 </div>
                 <h3>ASA SGMS</h3>
-                <p>Memudahkan Akses Informasi Even Di KPP ASTO</p>
+                <p>Mempermudah Penginformasian Keadaan Darurat</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Services = () => {
                   <img src={ASAEVEN} width="150" alt="" />
                 </div>
                 <h3>ASA EVEN</h3>
-                <p>Lorem ipsum is are many variations of pass majy.</p>
+                <p>Memudahkan Akses Informasi Even Di KPP ASTO</p>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Services = () => {
                   <img src={ASASHOP} width="150" alt="" />
                 </div>
                 <h3>ASA SHOP</h3>
-                <p>Lorem ipsum is are many variations of pass majy.</p>
+                <p>Mempermudah Belanja Dilingkungan Mess Asto</p>
               </div>
             </div>
           </div>

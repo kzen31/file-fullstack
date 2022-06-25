@@ -65,42 +65,17 @@ const AppScreen = (props) => {
             <div className="item">
               <img src={appImage3} alt="Awesome Image" />
             </div>
-            <div className="item">
-              <img src={appImage4} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage5} alt="Awesome Image" />
-            </div>
+
             <div className="item">
               <img src={appImage1} alt="Awesome Image" />
             </div>
             <div className="item">
               <img src={appImage2} alt="Awesome Image" />
             </div>
-            <div className="item">
-              <img src={appImage3} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage4} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage5} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage1} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage2} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage3} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage4} alt="Awesome Image" />
-            </div>
-            <div className="item">
-              <img src={appImage5} alt="Awesome Image" />
-            </div>
+
+
+
+
           </Swiper>
         </div>
       </Container>

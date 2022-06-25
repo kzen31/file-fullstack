@@ -61,7 +61,7 @@ const Team = () => {
                   <a href="#">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://instagram.com/andriebanueka?igshid=YmMyMTA2M2Y=">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>
@@ -78,7 +78,7 @@ const Team = () => {
                   <img src={niko} alt="" />
                 </div>
                 <div className="team-one__social">
-                  <a href="#">
+                  <a href="https://www.facebook.com/nieqo">
                     <i className="fab fa-facebook-square"></i>
                   </a>
                   <a href="#">
@@ -101,13 +101,13 @@ const Team = () => {
                   <img src={dani} alt="" />
                 </div>
                 <div className="team-one__social">
-                  <a href="#">
+                  <a href="https://www.facebook.com/muhammad.nuhalmadani">
                     <i className="fab fa-facebook-square"></i>
                   </a>
                   <a href="#">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://instagram.com/muhammadnuhalmadani?igshid=NWRhNmQxMjQ=">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>
@@ -130,7 +130,7 @@ const Team = () => {
                   <a href="#">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://instagram.com/shidiq_pitoyo?igshid=YmMyMTA2M2Y=">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>
@@ -147,13 +147,13 @@ const Team = () => {
                   <img src={zain} alt="" />
                 </div>
                 <div className="team-one__social">
-                  <a href="#">
+                  <a href="https://www.facebook.com/muhammad.khuzain.5">
                     <i className="fab fa-facebook-square"></i>
                   </a>
                   <a href="#">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://instagram.com/ku_zein?igshid=YmMyMTA2M2Y=">
                     <i className="fab fa-instagram"></i>
                   </a>
                 </div>

@@ -34,7 +34,7 @@ const HeaderHome = (props) => {
     >
       <div className="container-fluid">
         <div className="site-header-one__logo">
-          <a href="/">
+          <a href="/home">
             <img src={LogoImage} width="75" alt="" />
           </a>
           <span className="side-menu__toggler" onClick={handleMenuClick}>
@@ -45,7 +45,7 @@ const HeaderHome = (props) => {
           <NavLinks />
         </div>
         <div className="main-nav__right">
-          <a href="#" className={`thm-btn ${props.btnClass}`}>
+          <a href="/login" className={`thm-btn ${props.btnClass}`}>
             <span>Login </span>
           </a>
         </div>

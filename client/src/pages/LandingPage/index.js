@@ -32,7 +32,7 @@ function LandingPage() {
     body.style.backgroundColor = "white";
     return (
         <MenuContextProvider>
-            <Layout pageTitle="Apiton | Home Page">
+            <Layout pageTitle="ASA | Asto Service App">
                 <Header
                     btnClass="main-nav__btn"
                     extraClassName="site-header-one__fixed-top"
@@ -42,15 +42,15 @@ function LandingPage() {
                 <CTAOne />
                 <FunFact />
                 <CTATwo />
-                <Pricing />
-                <Testimonials />
+                {/* <Pricing /> */}
+                {/* <Testimonials /> */}
                 <Clients />
                 <Team />
-                <VideoOne />
+                {/* <VideoOne /> */}
                 <AppScreen />
-                <FAQ />
-                <BlogHome />
-                <Contact />
+                {/* <FAQ /> */}
+                {/* <BlogHome /> */}
+                {/* <Contact /> */}
                 <CTAThree />
                 <Footer />
             </Layout>
