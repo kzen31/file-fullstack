@@ -4,7 +4,7 @@ import BlockTitle from "./BlockTitle";
 import TeamShape1 from "../assets/images/shapes/team-1-bg-1-1.png";
 import TeamShape2 from "../assets/images/shapes/team-1-bg-1-2.png";
 import rendy from "../assets/images/team/rendy.jpeg";
-import andre from "../assets/images/team/andre.jpeg";
+import andre from "../assets/images/team/maslord.jpeg";
 import niko from "../assets/images/team/niko.jpeg";
 import shidiq from "../assets/images/team/shidiq.jpeg";
 import dani from "../assets/images/team/Dani.jpeg";

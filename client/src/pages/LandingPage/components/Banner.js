@@ -3,7 +3,7 @@ import ModalVideo from "react-modal-video";
 
 import BannerShape from "../assets/images/shapes/banner-shape-1-1.png";
 import BannerBG from "../assets/images/resources/img-3.jpg";
-import BannerMoc from "../assets/images/ss/asa.png";
+import BannerMoc from "../assets/images/ss/home-phone12.png";
 import Download from "../assets/images/asalogo/loj.png";
 
 const Banner = () => {

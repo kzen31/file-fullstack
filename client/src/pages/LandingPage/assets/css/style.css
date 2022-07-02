@@ -38,9 +38,9 @@ font-family: 'Quicksand', sans-serif;
 
 :root {
   --thm-font: "Quicksand", sans-serif;
-  --thm-base: #8e2acb;
+  --thm-base: #6f096c;
   --thm-base-rgb: 253, 99, 47;
-  --thm-primary: #cf5798;
+  --thm-primary: #ca1e67;
   --thm-primary-rgb: 69, 80, 248;
   --thm-black: #252c4b;
   --thm-black-rgb: 37, 44, 75;
@@ -2582,7 +2582,7 @@ a:visited {
 }
 
 .wow {
-  border-radius: 70px;
+  border-radius: 50px;
 }
 
 .service-one__single {

@@ -4,11 +4,11 @@ import SwiperCore, { Pagination } from "swiper";
 import Swiper from "react-id-swiper";
 import BlockTitle from "./BlockTitle";
 
-import appImage1 from "../assets/images/app-shots/app-shot-n-1-1.png";
-import appImage2 from "../assets/images/app-shots/app-shot-n-1-2.png";
-import appImage3 from "../assets/images/app-shots/app-shot-n-1-3.png";
-import appImage4 from "../assets/images/app-shots/app-shot-n-1-4.png";
-import appImage5 from "../assets/images/app-shots/app-shot-n-1-5.png";
+import appImage1 from "../assets/images/app-shots/ss1.jpg";
+import appImage2 from "../assets/images/app-shots/ss2.jpg";
+import appImage3 from "../assets/images/app-shots/ss3.jpg";
+import appImage4 from "../assets/images/app-shots/ss4.jpg";
+import appImage5 from "../assets/images/app-shots/ss5.jpg";
 SwiperCore.use([Pagination]);
 
 const AppScreen = (props) => {
@@ -57,20 +57,20 @@ const AppScreen = (props) => {
         <div className="app-shot-one__carousel">
           <Swiper {...params}>
             <div className="item">
-              <img src={appImage1} alt="Awesome Image" />
+              <img src={appImage3} alt="Awesome Image" />
             </div>
             <div className="item">
               <img src={appImage2} alt="Awesome Image" />
             </div>
             <div className="item">
-              <img src={appImage3} alt="Awesome Image" />
+              <img src={appImage1} alt="Awesome Image" />
             </div>
 
             <div className="item">
-              <img src={appImage1} alt="Awesome Image" />
+              <img src={appImage4} alt="Awesome Image" />
             </div>
             <div className="item">
-              <img src={appImage2} alt="Awesome Image" />
+              <img src={appImage5} alt="Awesome Image" />
             </div>
 
 

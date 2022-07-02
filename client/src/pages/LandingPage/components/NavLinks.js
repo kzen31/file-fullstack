@@ -10,9 +10,16 @@ const NavLinks = () => {
   return (
     <ul className="main-nav__navigation-box">
       <li>
-        <Link href="home/">
-          <a>Home</a>
-        </Link>
+        <ScrollLink
+          activeClass="current"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          Home
+        </ScrollLink>
       </li>
       <li>
         <ScrollLink

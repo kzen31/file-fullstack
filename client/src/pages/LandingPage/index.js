@@ -44,7 +44,7 @@ function LandingPage() {
                 <CTATwo />
                 {/* <Pricing /> */}
                 {/* <Testimonials /> */}
-                <Clients />
+                {/* <Clients /> */}
                 <Team />
                 {/* <VideoOne /> */}
                 <AppScreen />
