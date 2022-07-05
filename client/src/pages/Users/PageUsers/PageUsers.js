@@ -114,7 +114,6 @@ const PageUsers = (props) => {
                     confirmBtnBsStyle="success"
                     cancelBtnBsStyle="danger"
                     onConfirm={() => {
-                        console.log(userToDelete)
                         setconfirm_both(false)
                         setsuccess_dlg(true)
                         setdynamic_title("Deleted")

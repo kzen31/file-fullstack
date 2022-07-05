@@ -3,7 +3,6 @@ import Layout from "./components/Layout";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import BlogHome from "./components/BlogHome";
 import CTAThree from "./components/CTAThree";
 import Contact from "./components/Contact";
 import Services from "./components/Services";
@@ -49,7 +48,6 @@ function LandingPage() {
                 {/* <VideoOne /> */}
                 <AppScreen />
                 {/* <FAQ /> */}
-                {/* <BlogHome /> */}
                 {/* <Contact /> */}
                 <CTAThree />
                 <Footer />

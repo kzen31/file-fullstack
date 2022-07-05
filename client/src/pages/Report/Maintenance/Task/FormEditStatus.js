@@ -22,7 +22,6 @@ const FormEditStatus = ({ dataStatus, modal_center, tog_center, func_setmodal_ce
         axios
             .put(process.env.REACT_APP_DATABASEURL + "/api/maintenance/task-update/" + `${id}`, payload, config)
             .then((response) => {
-                console.log(response);
                 tog_center();
                 fetchData();
             })

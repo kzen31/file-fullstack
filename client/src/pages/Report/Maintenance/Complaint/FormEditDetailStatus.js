@@ -38,7 +38,6 @@ const FormEdit = ({ dataStatus, modal_center, tog_center, func_setmodal_center, 
         axios
             .put(process.env.REACT_APP_DATABASEURL + "/api/maintenance/update-order/" + `${id}`, payload, config)
             .then((response) => {
-                console.log(response);
                 tog_center();
                 fetchData();
             })
@@ -64,7 +63,6 @@ const FormEdit = ({ dataStatus, modal_center, tog_center, func_setmodal_center, 
             <AvForm
                 onValidSubmit={(e, v) => {
                     editDetailStatus(v);
-                    console.log(v);
                 }}
             >
                 <div className="modal-header">

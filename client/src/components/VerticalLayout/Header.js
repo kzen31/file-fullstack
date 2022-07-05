@@ -14,8 +14,8 @@ import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
 // import megamenuImg from "../../assets/images/megamenu-img.png"
 import logo from "../../assets/images/astra.webp"
-import logoLightPng from "../../assets/images/logo-light.png"
-import logoDark from "../../assets/images/logo-dark.png"
+import logoLightPng from "../../assets/images/asalogo.png"
+import logoDark from "../../assets/images/asalogo.png"
 
 //i18n
 import { withTranslation } from "react-i18next"
@@ -73,7 +73,7 @@ const Header = props => {
                   <img src={logo} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoDark} alt="" height="17" />
+                  <img src={logoDark} alt="" height="50" />
                 </span>
               </Link>
 
@@ -82,7 +82,7 @@ const Header = props => {
                   <img src={logo} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoLightPng} alt="" height="19" />
+                  <img src={logoLightPng} alt="" height="50" />
                 </span>
               </Link>
             </div>

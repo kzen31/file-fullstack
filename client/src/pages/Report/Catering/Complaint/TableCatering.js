@@ -3,6 +3,7 @@ import MetaTags from 'react-meta-tags';
 import SweetAlert from "react-bootstrap-sweetalert";
 import { connect } from "react-redux";
 import axios from "axios";
+import Excel from "./xlsxComplntCatering";
 
 import {
   Table,
@@ -57,7 +58,6 @@ const TableCatering = (props) => {
       const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/catering/all', { headers });
       const data = await response.json();
       setComplaints(data);
-      console.log(data)
     }
   }
 
@@ -73,7 +73,6 @@ const TableCatering = (props) => {
     axios
       .delete(process.env.REACT_APP_DATABASEURL + "/api/catering/delete-record/" + `${id}`, config)
       .then((response) => {
-        console.log(response);
         setconfirm_both(false)
         setsuccess_dlg(true)
         setdynamic_title("Deleted")
@@ -162,10 +161,22 @@ const TableCatering = (props) => {
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">List of Catering Complaints </CardTitle>
-              <p className="card-title-desc">
-                Berisi list dari aduan catering dari user
-              </p>
+              <div className="row">
+                <div className="col-sm">
+                  <CardTitle className="h4">List of Catering Complaints </CardTitle>
+                  <p className="card-title-desc">
+                    Berisi list dari aduan catering dari user
+                  </p>
+                </div>
+                
+                <div className="col-sm d-flex flex-row-reverse">
+                  <div className="text-center">
+                    {(complaints) ? 
+                      <Excel data={complaints} />
+                      : null}
+                  </div>
+                </div>
+              </div>
 
               <div className="table-responsive">
                 <Table className="table mb-0">

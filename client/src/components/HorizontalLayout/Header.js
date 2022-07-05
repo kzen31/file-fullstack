@@ -15,8 +15,8 @@ import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
 // import megamenuImg from "../../assets/images/megamenu-img.png"
 import logo from "../../assets/images/astra.webp"
-import logoLight from "../../assets/images/logo-light.png"
-import logoDark from "../../assets/images/logo-dark.png"
+import logoLight from "../../assets/images/asalogo.png"
+import logoDark from "../../assets/images/asalogo.png"
 
 //i18n
 import { withTranslation } from "react-i18next"

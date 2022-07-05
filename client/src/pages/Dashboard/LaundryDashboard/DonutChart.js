@@ -5,7 +5,6 @@ import 'c3/c3.css';
 
 class DonutChart extends Component {
     render() {
-        // console.log(this.props.data);
         const data = {
             columns: [
                 [this.props.data[0].title.charAt(0) + this.props.data[0].title.slice(1).toLowerCase(), this.props.data[0].total],

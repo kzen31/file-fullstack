@@ -38,7 +38,7 @@ const MobileMenu = () => {
         <div className="side-menu__sep"></div>
         <div className="side-menu__content">
           <p>
-            Aplikasi ini dibuat dengan riset dan dedikasi tinggi untuk mendapatkan aplikasi yang mudah digunkan harap maklum jika ada bug.
+            Aplikasi ini dibuat dengan riset dan dedikasi tinggi untuk mendapatkan hasil yang memuaskan.
           </p>
           <p>
 

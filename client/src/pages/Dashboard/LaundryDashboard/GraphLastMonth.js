@@ -20,7 +20,6 @@ const GraphLastMonth = ({ data }) => {
         const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/laundry-dashboard/count-last-5-month', { headers });
         const data = await response.json();
         setReportByMonth(data);
-        // console.log(data)
 
         setOptions(
           {
@@ -95,7 +94,7 @@ const GraphLastMonth = ({ data }) => {
 
           <Row className="text-center mt-4">
             {reportByMonth.map((report, key) =>
-              <Col xs="3">
+              <Col xs="3" key={key}>
                 <h5 className="font-size-20">{report.total}</h5>
                 <p className="text-muted">{report.bulan + "/" + report.tahun}</p>
               </Col>

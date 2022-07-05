@@ -1,6 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import MetaTags from 'react-meta-tags';
 import SweetAlert from "react-bootstrap-sweetalert"
+import Excel from "./xlsxTaskMainten";
 import axios from "axios";
 
 import {
@@ -94,7 +95,7 @@ const TableMaintenance = (props) => {
     <React.Fragment>
 
       <MetaTags>
-        <title>Complaints</title>
+        <title>Task</title>
       </MetaTags>
 
       {success_dlg ? (
@@ -157,10 +158,21 @@ const TableMaintenance = (props) => {
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">List of Maintenance Complaints </CardTitle>
-              <p className="card-title-desc">
-                Berisi list dari aduan maintenance dari user
-              </p>
+              <div className="row">
+                <div className="col-sm">
+                  <CardTitle className="h4">List of Maintenance Task </CardTitle>
+                  <p className="card-title-desc">
+                    Berisi list dari task maintenance dari worker
+                  </p>
+                </div>
+                <div className="col-sm d-flex flex-row-reverse">
+                  <div className="text-center">
+                    {(complaints) ?
+                      <Excel data={complaints} />
+                      : null}
+                  </div>
+                </div>
+              </div>
               <div className="table-responsive">
                 <Table className="table mb-0">
                   <thead>

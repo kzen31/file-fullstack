@@ -21,7 +21,6 @@ const FormEditStatus = ({ dataStatus, modal_center, tog_center, func_setmodal_ce
         axios
             .put(process.env.REACT_APP_DATABASEURL + "/api/catering/update-status/" + `${id}`, payload, config)
             .then((response) => {
-                console.log(response);
                 tog_center();
                 fetchData();
             })
@@ -75,7 +74,6 @@ const FormEditStatus = ({ dataStatus, modal_center, tog_center, func_setmodal_ce
                         type="button"
                         onClick={() => {
                             tog_center();
-                            console.log(dataStatus);
                         }}
                         className="btn btn-secondary waves-effect"
                         data-dismiss="modal"

@@ -20,7 +20,6 @@ const GraphLastMonth = ({ data }) => {
         const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/maintenance-dashboard/count-last-5-month', { headers });
         const data = await response.json();
         setReportByMonth(data);
-        // console.log(data)
 
         setOptions(
           {

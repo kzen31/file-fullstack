@@ -9,13 +9,12 @@ import {
   CardBody,
   CardTitle,
   Button,
-  Modal,
 } from "reactstrap"
 
 import { connect } from "react-redux";
 import { setBreadcrumbItems } from "../../../../store/actions";
 import DetailRating from "./DetailRating";
-
+import Excel from "./xlsRatCatering";
 
 const TableCatering = (props) => {
   const [data, setData] = useState(null);
@@ -52,7 +51,6 @@ const TableCatering = (props) => {
         const response = await fetch(process.env.REACT_APP_DATABASEURL + '/api/catering/rating-catering-many', { headers });
         const data = await response.json();
         setData(data);
-        console.log(data);
       }
     }
 
@@ -64,27 +62,38 @@ const TableCatering = (props) => {
     <React.Fragment>
 
       <MetaTags>
-        <title>Rating Caterings</title>
+        <title>Rating</title>
       </MetaTags>
 
 
-      {(modal_center) ? 
-        <DetailRating 
+      {(modal_center) ?
+        <DetailRating
           tog_center={tog_center}
           record={record}
           modal_center={modal_center}
           func_setmodal_center={func_setmodal_center}
         />
-      : null }
+        : null}
 
       <Row>
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">List of Rating for Catering</CardTitle>
-              <p className="card-title-desc">
-                Berisi list rating yang diberikan oleh user kepada layanan catering
-              </p>
+              <div className="row">
+                <div className="col-sm-8">
+                  <CardTitle className="h4">List of Rating for Catering</CardTitle>
+                  <p className="card-title-desc">
+                    Berisi list rating yang diberikan oleh user kepada layanan catering
+                  </p>
+                </div>
+                <div className="col-sm-4 d-flex flex-row-reverse">
+                  <div className="text-center">
+                    {(data) ?
+                      <Excel data={data} />
+                      : null}
+                  </div>
+                </div>
+              </div>
 
               <div className="table-responsive">
                 <Table className="table mb-0">
@@ -106,7 +115,7 @@ const TableCatering = (props) => {
                         <th scope="row">{i + 1}</th>
                         <td>{object.user.nrp}</td>
                         <td>{object.user.name}</td>
-                        <td>{new Date (object.created_at).toLocaleDateString()}</td>
+                        <td>{new Date(object.created_at).toLocaleDateString()}</td>
                         <td>{object.saran}</td>
                         <td>{object.nilai1 + object.nilai2 + object.nilai3 + object.nilai4 + object.nilai5 + object.nilai6 + object.nilai7 + object.nilai8}</td>
                         <td style={{ width: "1px" }}>

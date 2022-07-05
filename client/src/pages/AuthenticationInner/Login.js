@@ -9,8 +9,8 @@ import { Row, Col, CardBody, Card, Container } from "reactstrap"
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
 // import images
-import logoLightPng from "../../assets/images/logo-light.png"
-import logoDark from "../../assets/images/logo-dark.png"
+import logoLightPng from "../../assets/images/asalogo.png"
+import logoDark from "../../assets/images/asalogo.png"
 
 const Login = () => {
   return (

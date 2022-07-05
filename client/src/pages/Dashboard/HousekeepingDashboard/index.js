@@ -35,7 +35,6 @@ const Dashboard = (props) => {
         const responseReport = await fetch(process.env.REACT_APP_DATABASEURL + '/api/housekeeping-dashboard/widget', { headers });
         const dataReport = await responseReport.json();
         setReports(dataReport);
-        console.log(dataReport)
       }
     }
 
@@ -47,7 +46,7 @@ const Dashboard = (props) => {
     <React.Fragment>
 
       <MetaTags>
-        <title>Dashboardssssssssssssss</title>
+        <title>Dashboard</title>
       </MetaTags>
 
       {reports &&

@@ -19,7 +19,7 @@ const FunFact = () => {
         <div className="row">
           <div className="col-lg-3 col-md-6">
             <div className="funfact-one__single">
-              <h3 className="counter">
+              {/* <h3 className="counter">
                 <VisibilitySensor
                   onChange={onVisibilityChange}
                   offset={{ top: 10 }}
@@ -28,12 +28,12 @@ const FunFact = () => {
                   <CountUp end={counter.startCounter ? 4789 : 0} />
                 </VisibilitySensor>
               </h3>
-              <p>Downloads</p>
+              <p>Downloads</p> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="funfact-one__single">
-              <h3 className="counter">
+              {/* <h3 className="counter">
                 <VisibilitySensor
                   onChange={onVisibilityChange}
                   offset={{ top: 10 }}
@@ -42,12 +42,12 @@ const FunFact = () => {
                   <CountUp end={counter.startCounter ? 6400 : 0} />
                 </VisibilitySensor>
               </h3>
-              <p>Likes</p>
+              <p>Likes</p> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="funfact-one__single">
-              <h3 className="counter">
+              {/* <h3 className="counter">
                 <VisibilitySensor
                   onChange={onVisibilityChange}
                   offset={{ top: 10 }}
@@ -56,12 +56,12 @@ const FunFact = () => {
                   <CountUp end={counter.startCounter ? 900 : 0} />
                 </VisibilitySensor>
               </h3>
-              <p>5 Star Rating</p>
+              <p>5 Star Rating</p> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
             <div className="funfact-one__single">
-              <h3 className="counter">
+              {/* <h3 className="counter">
                 <VisibilitySensor
                   onChange={onVisibilityChange}
                   offset={{ top: 10 }}
@@ -70,7 +70,7 @@ const FunFact = () => {
                   <CountUp end={counter.startCounter ? 266 : 0} />
                 </VisibilitySensor>
               </h3>
-              <p>Awards</p>
+              <p>Awards</p> */}
             </div>
           </div>
         </div>

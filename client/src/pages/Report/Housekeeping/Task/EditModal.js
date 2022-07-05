@@ -22,15 +22,11 @@ const EditModal = ({ dataModal, modal_standard, tog_standard, func_setmodal_stan
         } else {
             updateData = "mess";
         }
-
-        console.log(dataModal.no_kamar);
-        console.log(updateData);
-        
+       
 
         axios
             .put(process.env.REACT_APP_DATABASEURL + "/api/task/" + `${updateData}` +  "-update/" + `${id}`, payload, config)
             .then((response) => {
-                console.log(response);
                 tog_standard();
                 fetchData();
             })
@@ -48,7 +44,6 @@ const EditModal = ({ dataModal, modal_standard, tog_standard, func_setmodal_stan
         >
             <AvForm
                 onValidSubmit={(e, v) => {
-                    console.log(v);
                     editDetailRecord(v);
                 }}
             >

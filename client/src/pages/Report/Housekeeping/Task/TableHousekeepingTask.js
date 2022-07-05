@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MetaTags from 'react-meta-tags';
 import SweetAlert from "react-bootstrap-sweetalert";
 import axios from "axios";
+import DataFrame from "dataframe-js";
+import * as XLSX from 'xlsx'
 
 import {
   Table,
@@ -31,7 +33,7 @@ const TableHousekeeping = (props) => {
   const [record, setRecord] = useState(null);
 
   const breadcrumbItems = [
-    { title: "ASA Website", link: "#" },
+    { title: "Asa Service", link: "#" },
     { title: "Housekeeping", link: "#" },
     { title: "Task", link: "#" },
   ]
@@ -55,7 +57,6 @@ const TableHousekeeping = (props) => {
       const responseRoom = await fetch(process.env.REACT_APP_DATABASEURL + '/api/task/room', { headers });
       const dataRoom = await responseRoom.json();
       setTaskRoom(dataRoom);
-      // console.log(data)
 
       const responseMess = await fetch(process.env.REACT_APP_DATABASEURL + '/api/task/mess', { headers });
       const dataMess = await responseMess.json();
@@ -79,7 +80,7 @@ const TableHousekeeping = (props) => {
     }
 
     axios
-      .delete(process.env.REACT_APP_DATABASEURL + "/api/task/" + `${deleteData}` +"-delete/" + `${id}`, config)
+      .delete("http://asabeta.com/api/task/" + `${deleteData}` + "-delete/" + `${id}`, config)
       .then((response) => {
         setconfirm_both(false)
         setsuccess_dlg(true)
@@ -106,6 +107,98 @@ const TableHousekeeping = (props) => {
   function removeBodyCss() {
     document.body.classList.add("no_padding")
   }
+  function boleanToInteger(obj) {
+    let tampung = {};
+
+    let entries = Object.entries(obj)
+    entries.map(([key, val] = entry) => {
+      let temp = {}
+      if (val === true) temp = { [key]: 1 }
+      else if (val === false) temp = { [key]: 0 }
+      else temp = { [key]: val }
+      tampung = { ...tampung, ...temp }
+
+    });
+    return tampung;
+  }
+  function createExcel() {
+    const objBaru = taskRoom.map(obj => {
+      if (obj == true) return '1'
+      if (obj == false) return '0'
+      else return obj
+    })
+    let taskRoomNew = taskRoom.map(obj => {
+      const temp = {
+        'name': obj.user.name,
+        'nrp': obj.user.nrp,
+        'department': obj.user.department,
+        'tanggal': new Date(obj.created_at).toLocaleDateString(),
+        'waktu': new Date(obj.created_at).toLocaleTimeString(),
+        'total': countRoom(obj)
+      }
+      const newObj = boleanToInteger(obj)
+      return { ...temp, ...newObj }
+    })
+    let data = taskRoomNew;
+
+    let tampung = {};
+
+    let entries = Object.entries(data[0])
+    let header = entries.map(([key, val] = entry) => {
+      const temp = { [key]: key }
+      tampung = { ...tampung, ...temp }
+    });
+
+    data.unshift(tampung);
+
+    const df = new DataFrame(data, ['tanggal', 'waktu', 'name', 'mess', 'no_kamar', 'lantai_kamar', 'lantai_toilet', 'lantai_langit_kamar', 'lantai_langit_kamar', 'wc', 'wastafel', 'tempat_tidur', 'sprei', 'selimut', 'ac', 'meja', 'cermin', 'keran', 'shower', 'tempat_sampah', 'jendela', 'gorden', 'lemari', 'total']);
+
+    const worksheet = XLSX.utils.json_to_sheet(df.transpose().toCollection(), { skipHeader: true });
+    const workbook = XLSX.utils.book_new();
+
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Housekeeping Task Room");
+
+    XLSX.writeFile(workbook, "Housekeeping Task Room.xlsx");
+  }
+  function createExcel2() {
+    const objBaru = taskMess.map(obj => {
+      if (obj == true) return '1'
+      if (obj == false) return '0'
+      else return obj
+    })
+    let taskMessNew = taskMess.map(obj => {
+      const temp = {
+        'name': obj.user.name,
+        'nrp': obj.user.nrp,
+        'department': obj.user.department,
+        'tanggal': new Date(obj.created_at).toLocaleDateString(),
+        'waktu': new Date(obj.created_at).toLocaleTimeString(),
+        'total': countMess(obj)
+      }
+      const newObj = boleanToInteger(obj)
+      return { ...temp, ...newObj }
+    })
+    let data = taskMessNew;
+
+    let tampung = {};
+
+    let entries = Object.entries(data[0])
+    let header = entries.map(([key, val] = entry) => {
+      const temp = { [key]: key }
+      tampung = { ...tampung, ...temp }
+    });
+
+    data.unshift(tampung);
+
+    const df = new DataFrame(data, ['tanggal', 'waktu', 'name', 'mess', 'ruang_tv_kaca_jendela_kusen', 'ruang_tv_cermin', 'ruang_tv_dispenser', 'ruang_tv_ac', 'ruang_tv_furniture', 'ruang_tv_rak_tv', 'ruang_tv_tirai_karpet', 'ruang_tv_dinding', 'ruang_tv_lantai', 'koridor_tempat_sampah', 'koridor_pintu', 'koridor_lantai_sudut_lantai', 'koridor_keset', 'koridor_pantry', 'koridor_wastafel_chrome_fixture', 'koridor_peralatan_makan_rak_piring', 'koridor_pintu_dinding', 'koridor_kanca_jendela_kusen', 'toilet_pintu_dinding', 'toilet_tempat_sampah', 'toilet_wastafel_chrome_fixture', 'toilet_urinoir_selang_toilet_bowl', 'toilet_shower_area_curtain', 'toilet_lantai_sudut_lantai', 'toilet_teras', 'total']);
+
+    const worksheet = XLSX.utils.json_to_sheet(df.transpose().toCollection(), { skipHeader: true });
+    const workbook = XLSX.utils.book_new();
+
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Housekeeping Task Mess");
+
+    XLSX.writeFile(workbook, "Housekeeping Task Mess.xlsx");
+  }
 
   useEffect(() => {
     props.setBreadcrumbItems('Task', breadcrumbItems)
@@ -117,7 +210,7 @@ const TableHousekeeping = (props) => {
     <React.Fragment>
 
       <MetaTags>
-        <title>Complaints</title>
+        <title>Task</title>
       </MetaTags>
 
       {success_dlg ? (
@@ -180,10 +273,30 @@ const TableHousekeeping = (props) => {
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">Room Housekeeping</CardTitle>
-              <p className="card-title-desc">
-                Berisi record ruangan yang telah dibersihkan oleh worker
-              </p>
+              <div className="row">
+                <div className="col-sm">
+                  <CardTitle className="h4">Room Housekeeping</CardTitle>
+                  <p className="card-title-desc">
+                    Berisi record ruangan yang telah dibersihkan oleh worker
+                  </p>
+                </div>
+                <div className="col-sm d-flex flex-row-reverse">
+                  <div className="text-center">
+                    <Button
+                      color="success"
+                      size="md"
+                      className="waves-effect waves-light"
+                      type="button"
+                      onClick={() => {
+                        createExcel();
+                      }}
+                      id="sa-success"
+                    >
+                      Export To xlsx
+                    </Button>
+                  </div>
+                </div>
+              </div>
 
               <div className="table-responsive">
                 <Table className="table mb-0">
@@ -252,10 +365,31 @@ const TableHousekeeping = (props) => {
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">Mess Housekeeping</CardTitle>
-              <p className="card-title-desc">
-                Berisi record mess yang telah dibersihkan
-              </p>
+              <div className="row">
+                <div className="col-sm">
+                  <CardTitle className="h4">Mess Housekeeping</CardTitle>
+                  <p className="card-title-desc">
+                    Berisi record mess yang telah dibersihkan
+                  </p>
+                </div>
+
+                <div className="col-sm d-flex flex-row-reverse">
+                  <div className="text-center">
+                    <Button
+                      color="success"
+                      size="md"
+                      className="waves-effect waves-light"
+                      type="button"
+                      onClick={() => {
+                        createExcel2();
+                      }}
+                      id="sa-success"
+                    >
+                      Export To xlsx
+                    </Button>
+                  </div>
+                </div>
+              </div>
 
               <div className="table-responsive">
                 <Table className="table mb-0">

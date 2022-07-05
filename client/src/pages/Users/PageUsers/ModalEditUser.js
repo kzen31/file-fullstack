@@ -19,7 +19,6 @@ const ModalEditUser = ({ modal_center, dataUser, fetchData, resetPassword, tog_c
         axios
             .put(process.env.REACT_APP_DATABASEURL + "/api/reset", payload, config)
             .then((response) => {
-                console.log(response);
                 tog_center();
                 fetchData();
             })

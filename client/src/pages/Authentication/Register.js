@@ -14,8 +14,8 @@ import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 // import images
-import logoLightPng from "../../assets/images/logo-light.png"
-import logoDark from "../../assets/images/logo-dark.png"
+import logoLightPng from "../../assets/images/asalogo.png"
+import logoDark from "../../assets/images/asalogo.png"
 
 const Register = props => {
   // handleValidSubmit

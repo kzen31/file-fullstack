@@ -15,8 +15,8 @@ import { AvForm, AvField } from "availity-reactstrap-validation"
 import { loginUser, apiError } from "../../store/actions"
 
 // import images
-import logoLightPng from "../../assets/images/logo-light.png"
-import logoDark from "../../assets/images/logo-dark.png"
+import logoLightPng from "../../assets/images/asalogo.png"
+import logoDark from "../../assets/images/asalogo.png"
 
 const Login = props => {
   const handleValidSubmit = (event, values) => {
@@ -36,13 +36,13 @@ const Login = props => {
                 <CardBody className="pt-0">
                   <h3 className="text-center mt-5 mb-4">
                     <Link to="/" className="d-block auth-logo">
-                      <img src={logoDark} alt="" height="30" className="auth-logo-dark" />
-                      <img src={logoLightPng} alt="" height="30" className="auth-logo-light" />
+                      <img src={logoDark} alt="" height="150" className="auth-logo-dark" />
+                      <img src={logoLightPng} alt="" height="150" className="auth-logo-light" />
                     </Link>
                   </h3>
                   <div className="p-3">
-                    <h4 className="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-                    <p className="text-muted text-center">Sign in to continue to Asa Web Admin.</p>
+                    <h4 className="text-muted font-size-18 mb-1 text-center">Welcome to Asa Web Admin !</h4>
+                    <p className="text-muted text-center">Sign in to continue . . .</p>
                     <AvForm
                       className="form-horizontal mt-4"
                       onValidSubmit={(e, v) => {
@@ -59,7 +59,6 @@ const Login = props => {
                         <AvField
                           name="email"
                           label="NRP"
-                          value="001"
                           className="form-control"
                           placeholder="Enter NRP"
                           type="text"
@@ -71,7 +70,6 @@ const Login = props => {
                         <AvField
                           name="password"
                           label="Password"
-                          value="123"
                           type="password"
                           required
                           placeholder="Enter Password"

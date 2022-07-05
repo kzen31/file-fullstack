@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import MetaTags from 'react-meta-tags';
 import SweetAlert from "react-bootstrap-sweetalert";
 import axios from "axios";
@@ -11,15 +11,13 @@ import {
   CardBody,
   CardTitle,
   Button,
-  Badge,
-  Modal,
 } from "reactstrap"
 
 import { connect } from "react-redux";
 import { setBreadcrumbItems } from "../../../store/actions";
-import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio, AvCheckboxGroup, AvCheckbox } from 'availity-reactstrap-validation';
 import BadgeStatus from "./BadgeStatus";
 import FormEditStatus from "./FormEditStatus";
+import Excel from "./xlsxLaundry";
 
 const TableLaundry = (props) => {
   const [complaints, setComplaints] = useState([]);
@@ -73,7 +71,6 @@ const TableLaundry = (props) => {
     axios
       .delete(process.env.REACT_APP_DATABASEURL + "/api/laundry/delete-record/" + `${id}`, config)
       .then((response) => {
-        console.log(response);
         setconfirm_both(false)
         setsuccess_dlg(true)
         setdynamic_title("Deleted")
@@ -152,7 +149,7 @@ const TableLaundry = (props) => {
           modal_center={modal_center}
           tog_center={tog_center}
           func_setmodal_center={func_setmodal_center}
-          fetchData = {fetchData}
+          fetchData={fetchData}
         />
         : null}
 
@@ -160,10 +157,21 @@ const TableLaundry = (props) => {
         <Col lg={12}>
           <Card>
             <CardBody>
-              <CardTitle className="h4">List of Laundry Complaints </CardTitle>
-              <p className="card-title-desc">
-                Berisi list dari aduan laundry dari user
-              </p>
+              <div className="row">
+                <div className="col-sm">
+                  <CardTitle className="h4">List of Laundry Complaints </CardTitle>
+                  <p className="card-title-desc">
+                    Berisi list dari aduan laundry dari user
+                  </p>
+                </div>
+                <div className="col-sm d-flex flex-row-reverse">
+                  <div className="text-center">
+                    {(complaints) ?
+                      <Excel data={complaints} />
+                      : null}
+                  </div>
+                </div>
+              </div>
 
               <div className="table-responsive">
                 <Table className="table mb-0">

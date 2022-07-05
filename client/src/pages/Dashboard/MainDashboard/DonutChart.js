@@ -6,8 +6,6 @@ import 'c3/c3.css';
 class DonutChart extends Component {
 
     render() {
-        console.log("donur main")
-        console.log(this.props.data[0]);
         const data = {
             columns: [
                 [this.props.data[0].status, this.props.data[0].count],
